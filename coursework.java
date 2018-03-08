@@ -3,54 +3,67 @@ import java.awt.*;
 import java.awt.event.*;
 public class coursework implements ActionListener
 {
-	//Set Frame and Panel to add Buttons into the GUI
+
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	
-	//Link each Button with the picture stored in the same folder as the files
 	ImageIcon a = new ImageIcon("bart0.jpg");
-	JButton button1 = new JButton(a);
-	
 	ImageIcon b = new ImageIcon("bart1.jpg");
-	JButton button2 = new JButton(b);
-	
 	ImageIcon c = new ImageIcon("bart2.jpg");
-	JButton button3 = new JButton(c);
-	
 	ImageIcon d = new ImageIcon("bart3.jpg");
-	JButton button4 = new JButton(d);
-	
 	ImageIcon e = new ImageIcon("bart4.jpg");
-	JButton button5 = new JButton(e);
-	
 	ImageIcon f = new ImageIcon("bart5.jpg");
-	JButton button6 = new JButton(f);
-	
 	ImageIcon g = new ImageIcon("bart6.jpg");
-	JButton button7 = new JButton(g);
-	
 	ImageIcon h = new ImageIcon("bart7.jpg");
-	JButton button8 = new JButton(h);
-	
 	ImageIcon i = new ImageIcon("bart8.jpg");
-	JButton button9 = new JButton(i);
-	
 	ImageIcon j = new ImageIcon("bart9.jpg");
-	JButton button10 = new JButton(j);
-	
 	ImageIcon k = new ImageIcon("bart10.jpg");
-	JButton button11 = new JButton(k);
-	
 	ImageIcon l = new ImageIcon("bart11.jpg");
+	
+	JButton button1 = new JButton(a);
+	JButton button2 = new JButton(b);
+	JButton button3 = new JButton(c);
+	JButton button4 = new JButton(d);
+	JButton button5 = new JButton(e);
+	JButton button6 = new JButton(f);
+	JButton button7 = new JButton(g);
+	JButton button8 = new JButton(h);
+	JButton button9 = new JButton(i);
+	JButton button10 = new JButton(j);
+	JButton button11 = new JButton(k);
 	JButton button12 = new JButton(l);
 	
-	//set Grid Layout to represent the GUI
 	GridLayout grid = new GridLayout(3,4);
 	
 	public coursework()
 	{
 		
-		//Add the Buttons into the panels
+		a.setDescription("bart0");
+		b.setDescription("bart1");
+		c.setDescription("bart2");
+		d.setDescription("bart3");
+		e.setDescription("bart4");
+		f.setDescription("bart5");
+		g.setDescription("bart6");
+		h.setDescription("bart7");
+		i.setDescription("bart8");
+		j.setDescription("bart9");
+		k.setDescription("bart10");
+		l.setDescription("bart11");
+		
+		button1.setActionCommand("1");
+		button2.setActionCommand("2");
+		button3.setActionCommand("3");
+		button4.setActionCommand("4");
+		button5.setActionCommand("5");
+		button6.setActionCommand("6");
+		button7.setActionCommand("7");
+		button8.setActionCommand("8");
+		button9.setActionCommand("9");
+		button10.setActionCommand("10");
+		button11.setActionCommand("11");
+		button12.setActionCommand("12");
+
 		panel.add(button1);
 		panel.add(button2);
 		panel.add(button3);
@@ -63,8 +76,7 @@ public class coursework implements ActionListener
 		panel.add(button10);
 		panel.add(button11);
 		panel.add(button12);
-		
-		//Set the Frame title and size and make it visible on the page
+
 		frame.setContentPane(panel);
 		frame.setTitle("Swingin' Simpsons");
 		frame.setSize(450,370);
@@ -76,11 +88,492 @@ public class coursework implements ActionListener
 		button2.addActionListener(this);
 		button3.addActionListener(this);
 		button4.addActionListener(this);
+		button5.addActionListener(this);
+		button6.addActionListener(this);
+		button7.addActionListener(this);
+		button8.addActionListener(this);
+		button9.addActionListener(this);
+		button10.addActionListener(this);
+		button11.addActionListener(this);
+		button12.addActionListener(this);
 		
 	}
 	
 	public void actionPerformed(ActionEvent e)
 	{
+		JButton pressedButton = (JButton) e.getSource();
+		String command = pressedButton.getActionCommand();
 		
+		//PRESSING BUTTON 1
+		if(command.equals("1"))
+		{
+			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button2.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button5.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			
+		
+		}
+		
+		//PRESSING BUTTON 2
+		if(command.equals("2"))
+		{
+			if(((ImageIcon)button1.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button1.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button3.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button6.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+		
+		//PRESSING BUTTON 3
+		if(command.equals("3"))
+		{
+			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button2.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button4.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button4.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button7.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		
+			}
+		
+		//PRESSING BUTTON 4
+		if(command.equals("4"))
+		{
+			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button3.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button8.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+		
+		//PRESSING BUTTON 5
+		if(command.equals("5"))
+		{
+			if(((ImageIcon)button1.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button1.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button6.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button9.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button9.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+				
+		//PRESSING BUTTON 6
+		if(command.equals("6"))
+		{
+			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button2.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button5.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button7.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button10.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+		
+		//PRESSING BUTTON 7
+		if(command.equals("7"))
+		{
+			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button3.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button6.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button8.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button11.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+		
+		//PRESSING BUTTON 8
+		if(command.equals("8"))
+		{
+			if(((ImageIcon)button4.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button4.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button7.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button12.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button12.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		
+		}
+				
+		//PRESSING BUTTON 9
+		if(command.equals("9"))
+		{
+			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button5.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button10.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+			
+		//PRESSING BUTTON 10
+		if(command.equals("10"))
+		{
+			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button6.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button9.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button9.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button11.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+		
+		//PRESSING BUTTON 11
+		if(command.equals("11"))
+		{
+			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button7.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button10.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button12.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button12.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
+				
+		//PRESSING BUTTON 12
+		if(command.equals("12"))
+		{
+			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button8.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
+			{
+				SwingUtilities.invokeLater(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						button11.setIcon(pressedButton.getIcon());
+						pressedButton.setIcon(a);
+					}
+				});
+			}
+		}
 	}
 }
