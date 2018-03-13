@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class coursework implements ActionListener
+public class Coursework110 implements ActionListener
 {
 
 	JFrame frame = new JFrame();
@@ -35,7 +35,7 @@ public class coursework implements ActionListener
 	
 	GridLayout grid = new GridLayout(3,4);
 	
-	public coursework()
+	public Coursework110()
 	{
 		
 		a.setDescription("bart0");
@@ -104,7 +104,7 @@ public class coursework implements ActionListener
 		JButton pressedButton = (JButton) e.getSource();
 		String command = pressedButton.getActionCommand();
 		
-		//PRESSING BUTTON 1
+		//PRESSING BUTTON 1box
 		if(command.equals("1"))
 		{
 			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
@@ -576,4 +576,35 @@ public class coursework implements ActionListener
 			}
 		}
 	}
+	
+	public static void Scoreboard()
+	
+	{
+		JFrame scoreboardFrame = new JFrame();
+		JPanel scoreboardPanel = new JPanel();
+		
+		for(int i = 0; i < 11; i ++)
+		{
+			JLabel name = new JLabel("NONE");
+			scoreboardPanel.add(name);
+		}
+		
+		for(int j = 0; j < 10; j ++)
+		{
+			JLabel score = new JLabel("NONE");
+			scoreboardPanel.add(score);
+		}
+		
+		JButton scoreboardButton = new JButton();
+		scoreboardPanel.add(scoreboardButton);
+		GridLayout grid = new GridLayout(11,2);
+
+		scoreboardFrame.setContentPane(scoreboardPanel);
+		scoreboardFrame.setTitle("HIGH SCORES");
+		scoreboardFrame.setSize(450,300);
+		scoreboardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		scoreboardPanel.setLayout(grid);
+		scoreboardFrame.setVisible(true);
+	}
+	
 }

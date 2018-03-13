@@ -1,8 +1,9 @@
-public class courseworkrun
+public class Coursework110Run
 {
 	public static void main(String[] args)
 	{
 		//Launch the GUI
-		coursework a = new coursework();
+		Coursework110 a = new Coursework110();
+		a.Scoreboard();
 	}
 }
