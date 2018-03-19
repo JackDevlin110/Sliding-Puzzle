@@ -3,10 +3,11 @@ import java.awt.*;
 import java.awt.event.*;
 public class Coursework110 implements ActionListener
 {
-
+	//Create the Frame and Panel
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	
+	//Import the Images for the Puzzle
 	ImageIcon a = new ImageIcon("bart0.jpg");
 	ImageIcon b = new ImageIcon("bart1.jpg");
 	ImageIcon c = new ImageIcon("bart2.jpg");
@@ -20,6 +21,7 @@ public class Coursework110 implements ActionListener
 	ImageIcon k = new ImageIcon("bart10.jpg");
 	ImageIcon l = new ImageIcon("bart11.jpg");
 	
+	//Create the Buttons
 	JButton button1 = new JButton(a);
 	JButton button2 = new JButton(b);
 	JButton button3 = new JButton(c);
@@ -33,11 +35,20 @@ public class Coursework110 implements ActionListener
 	JButton button11 = new JButton(k);
 	JButton button12 = new JButton(l);
 	
+	//Array created for the Scoreboard
+	JLabel[] names = new JLabel[10];
+	JLabel[] scores = new JLabel[10];
+	
+	//Counter for the Scoreboard (click counter for puzzle)
+	int counter = 0;
+	
+	//Implemeneted the Grid Layout
 	GridLayout grid = new GridLayout(3,4);
 	
 	public Coursework110()
 	{
 		
+		//Describe each image in a simple format
 		a.setDescription("bart0");
 		b.setDescription("bart1");
 		c.setDescription("bart2");
@@ -51,6 +62,7 @@ public class Coursework110 implements ActionListener
 		k.setDescription("bart10");
 		l.setDescription("bart11");
 		
+		//Implement an ActionCommand to refer to each Button easier
 		button1.setActionCommand("1");
 		button2.setActionCommand("2");
 		button3.setActionCommand("3");
@@ -63,7 +75,8 @@ public class Coursework110 implements ActionListener
 		button10.setActionCommand("10");
 		button11.setActionCommand("11");
 		button12.setActionCommand("12");
-
+		
+		//Add each Button to the Panel
 		panel.add(button1);
 		panel.add(button2);
 		panel.add(button3);
@@ -76,7 +89,8 @@ public class Coursework110 implements ActionListener
 		panel.add(button10);
 		panel.add(button11);
 		panel.add(button12);
-
+		
+		//Set the Frame details and make it visible
 		frame.setContentPane(panel);
 		frame.setTitle("Swingin' Simpsons");
 		frame.setSize(450,370);
@@ -84,6 +98,7 @@ public class Coursework110 implements ActionListener
 		panel.setLayout(grid);
 		frame.setVisible(true);
 		
+		//Activate ActionListener for each Button
 		button1.addActionListener(this);
 		button2.addActionListener(this);
 		button3.addActionListener(this);
@@ -104,7 +119,7 @@ public class Coursework110 implements ActionListener
 		JButton pressedButton = (JButton) e.getSource();
 		String command = pressedButton.getActionCommand();
 		
-		//PRESSING BUTTON 1box
+		//PRESSING BUTTON 1
 		if(command.equals("1"))
 		{
 			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
@@ -276,6 +291,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button9.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -574,37 +590,60 @@ public class Coursework110 implements ActionListener
 					}
 				});
 			}
+			
 		}
+
 	}
 	
-	public static void Scoreboard()
+	public void scoreboard()
 	
 	{
+		//Create the Frame and Panel for the Scoreboard
 		JFrame scoreboardFrame = new JFrame();
 		JPanel scoreboardPanel = new JPanel();
 		
+		//Create an array of Labels (for inputted names)
 		for(int i = 0; i < 11; i ++)
 		{
 			JLabel name = new JLabel("NONE");
 			scoreboardPanel.add(name);
 		}
 		
+		//Create an array of Labels (for inputted scores)
 		for(int j = 0; j < 10; j ++)
 		{
 			JLabel score = new JLabel("NONE");
 			scoreboardPanel.add(score);
 		}
 		
+		//Create a Button for entering name of player
 		JButton scoreboardButton = new JButton();
 		scoreboardPanel.add(scoreboardButton);
 		GridLayout grid = new GridLayout(11,2);
-
+		
+		//Set the Scoreboard Frame details and make it visible
 		scoreboardFrame.setContentPane(scoreboardPanel);
 		scoreboardFrame.setTitle("HIGH SCORES");
 		scoreboardFrame.setSize(450,300);
 		scoreboardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		scoreboardPanel.setLayout(grid);
 		scoreboardFrame.setVisible(true);
+		
 	}
-	
+
+	public void incrementScore()
+	{
+		//Implement the counter
+		counter++;
+		SwingUtilities.invokeLater(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				//Set the label to current click counter
+				scores[0].setText("Current Score: " + counter);
+			}
+		});
+	}
+		
 }

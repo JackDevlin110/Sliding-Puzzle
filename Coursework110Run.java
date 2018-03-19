@@ -4,6 +4,6 @@ public class Coursework110Run
 	{
 		//Launch the GUI
 		Coursework110 a = new Coursework110();
-		a.Scoreboard();
+		a.scoreboard();
 	}
 }
