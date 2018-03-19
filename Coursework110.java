@@ -1,6 +1,19 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+
+/**
+* <h1>Sliding Puzzle Game</h1>
+* The sliding puzzle program implements an application that
+* runs a simple puzzle game that the user can attempt to solve.
+* <p>
+* This also includes a 'high score' application that allows the
+* user to enter their name and keep track of their current score.
+* 
+* @author Jack Devlin
+* @version 1.0
+*/ 
+
 public class Coursework110 implements ActionListener
 {
 
@@ -46,9 +59,14 @@ public class Coursework110 implements ActionListener
 	//Implemeneted the Grid Layout
 	GridLayout grid = new GridLayout(3,4);
 	
+	/**
+	* This constructor adds functionaility to the gameis used to implement and add the components of 
+	* the graphical user interface that contains the images used 
+	* for the sliding puzzle game.
+	*/
 	public Coursework110()
 	{
-		
+
 		//Describe each image in a simple format
 		a.setDescription("bart0");
 		b.setDescription("bart1");
@@ -114,9 +132,16 @@ public class Coursework110 implements ActionListener
 		button12.addActionListener(this);
 		
 	}
-	
+	/**
+	* This method is used to add functionality to the game.
+	* <p>
+	* The images in the GUI are swapped so that the game functions. 
+	* It also ensures that images not located next to the blank tile 
+	* will not be able to swap, adding validation to the game.
+	*/
 	public void actionPerformed(ActionEvent e)
 	{
+
 		JButton pressedButton = (JButton) e.getSource();
 		String command = pressedButton.getActionCommand();
 		
@@ -629,8 +654,12 @@ public class Coursework110 implements ActionListener
 
 	}
 	
+	/**
+	* This method is used to display a high scores scoreboard that
+	* allows the user to enter their name and displays the current 
+	* count/score while they are playing the game.
+	*/
 	public void scoreboard()
-	
 	{
 		//Create the Frame and Panel for the Scoreboard
 		JFrame scoreboardFrame = new JFrame();
@@ -657,8 +686,13 @@ public class Coursework110 implements ActionListener
 		
 		//Add an ActionListener so that when user presses enter the label is updated with current name.
 		textField.addActionListener(new ActionListener(){
+	/**
+	* This method is used to update the label with the name that the
+	* user enters into the text field.
+	*/
 	public void actionPerformed(ActionEvent e)
     {
+
 		scores[1].setText(textField.getText());
 
     }});
@@ -675,7 +709,12 @@ public class Coursework110 implements ActionListener
 		scoreboardPanel.setLayout(grid);
 		scoreboardFrame.setVisible(true);
 	}
-
+	
+	/**
+	* This method is used to count how many times the user clicks
+	* the buttons in the game and updates a label within the scoreboard
+	* with the current click count.
+	*/
 	public void incrementScore()
 	{
 		//Implement the counter
