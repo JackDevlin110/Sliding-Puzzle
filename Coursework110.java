@@ -3,41 +3,42 @@ import java.awt.*;
 import java.awt.event.*;
 public class Coursework110 implements ActionListener
 {
+
 	//Create the Frame and Panel
-	JFrame frame = new JFrame();
-	JPanel panel = new JPanel();
+	private JFrame frame = new JFrame();
+	private JPanel panel = new JPanel();
 	
 	//Import the Images for the Puzzle
-	ImageIcon a = new ImageIcon("bart0.jpg");
-	ImageIcon b = new ImageIcon("bart1.jpg");
-	ImageIcon c = new ImageIcon("bart2.jpg");
-	ImageIcon d = new ImageIcon("bart3.jpg");
-	ImageIcon e = new ImageIcon("bart4.jpg");
-	ImageIcon f = new ImageIcon("bart5.jpg");
-	ImageIcon g = new ImageIcon("bart6.jpg");
-	ImageIcon h = new ImageIcon("bart7.jpg");
-	ImageIcon i = new ImageIcon("bart8.jpg");
-	ImageIcon j = new ImageIcon("bart9.jpg");
-	ImageIcon k = new ImageIcon("bart10.jpg");
-	ImageIcon l = new ImageIcon("bart11.jpg");
+	private ImageIcon a = new ImageIcon("bart0.jpg");
+	private ImageIcon b = new ImageIcon("bart1.jpg");
+	private ImageIcon c = new ImageIcon("bart2.jpg");
+	private ImageIcon d = new ImageIcon("bart3.jpg");
+	private ImageIcon e = new ImageIcon("bart4.jpg");
+	private ImageIcon f = new ImageIcon("bart5.jpg");
+	private ImageIcon g = new ImageIcon("bart6.jpg");
+	private ImageIcon h = new ImageIcon("bart7.jpg");
+	private ImageIcon i = new ImageIcon("bart8.jpg");
+	private ImageIcon j = new ImageIcon("bart9.jpg");
+	private ImageIcon k = new ImageIcon("bart10.jpg");
+	private ImageIcon l = new ImageIcon("bart11.jpg");
 	
 	//Create the Buttons
-	JButton button1 = new JButton(a);
-	JButton button2 = new JButton(b);
-	JButton button3 = new JButton(c);
-	JButton button4 = new JButton(d);
-	JButton button5 = new JButton(e);
-	JButton button6 = new JButton(f);
-	JButton button7 = new JButton(g);
-	JButton button8 = new JButton(h);
-	JButton button9 = new JButton(i);
-	JButton button10 = new JButton(j);
-	JButton button11 = new JButton(k);
-	JButton button12 = new JButton(l);
+	private JButton button1 = new JButton(a);
+	private JButton button2 = new JButton(b);
+	private JButton button3 = new JButton(c);
+	private JButton button4 = new JButton(d);
+	private JButton button5 = new JButton(e);
+	private JButton button6 = new JButton(f);
+	private JButton button7 = new JButton(g);
+	private JButton button8 = new JButton(h);
+	private JButton button9 = new JButton(i);
+	private JButton button10 = new JButton(j);
+	private JButton button11 = new JButton(k);
+	private JButton button12 = new JButton(l);
 	
 	//Array created for the Scoreboard
-	JLabel[] names = new JLabel[10];
-	JLabel[] scores = new JLabel[10];
+	private JLabel[] names = new JLabel[10];
+	private JLabel[] scores = new JLabel[10];
 	
 	//Counter for the Scoreboard (click counter for puzzle)
 	int counter = 0;
@@ -124,6 +125,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -136,6 +138,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -155,6 +158,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button1.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -167,6 +171,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -179,6 +184,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -196,6 +202,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -208,6 +215,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button4.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -220,6 +228,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -238,6 +247,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -250,6 +260,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -267,6 +278,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button1.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -279,6 +291,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -309,6 +322,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button2.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -321,6 +335,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -333,6 +348,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -345,6 +361,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -362,6 +379,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button3.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -374,6 +392,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -386,6 +405,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -398,6 +418,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -415,6 +436,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button4.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -427,6 +449,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -439,6 +462,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button12.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -457,6 +481,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button5.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -469,6 +494,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -486,6 +512,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button6.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -498,6 +525,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button9.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -510,6 +538,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -527,6 +556,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button7.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -539,6 +569,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button10.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -551,6 +582,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button12.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -568,6 +600,7 @@ public class Coursework110 implements ActionListener
 		{
 			if(((ImageIcon)button8.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -580,6 +613,7 @@ public class Coursework110 implements ActionListener
 			}
 			if(((ImageIcon)button11.getIcon()).getDescription().equals("bart0"))
 			{
+				incrementScore();
 				SwingUtilities.invokeLater(new Runnable()
 				{
 					@Override
@@ -605,7 +639,7 @@ public class Coursework110 implements ActionListener
 		//Create an array of Labels (for inputted names)
 		for(int i = 0; i < 11; i ++)
 		{
-			JLabel name = new JLabel("NONE");
+			JLabel name = new JLabel("");
 			scoreboardPanel.add(name);
 		}
 		
@@ -614,11 +648,23 @@ public class Coursework110 implements ActionListener
 		{
 			JLabel score = new JLabel("NONE");
 			scoreboardPanel.add(score);
+			scores[j] = score;
 		}
+		scores[0].setText("Score:");
 		
-		//Create a Button for entering name of player
-		JButton scoreboardButton = new JButton();
-		scoreboardPanel.add(scoreboardButton);
+		//Create text field for entering name of player
+		JTextField textField = new JTextField();
+		
+		//Add an ActionListener so that when user presses enter the label is updated with current name.
+		textField.addActionListener(new ActionListener(){
+	public void actionPerformed(ActionEvent e)
+    {
+		scores[1].setText(textField.getText());
+
+    }});
+        
+        //Add the text field to the panel and use grid layout
+		scoreboardPanel.add(textField);
 		GridLayout grid = new GridLayout(11,2);
 		
 		//Set the Scoreboard Frame details and make it visible
@@ -628,22 +674,14 @@ public class Coursework110 implements ActionListener
 		scoreboardFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		scoreboardPanel.setLayout(grid);
 		scoreboardFrame.setVisible(true);
-		
 	}
 
 	public void incrementScore()
 	{
 		//Implement the counter
 		counter++;
-		SwingUtilities.invokeLater(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				//Set the label to current click counter
-				scores[0].setText("Current Score: " + counter);
-			}
-		});
+		//Set the label to current click counter
+		scores[2].setText("" + counter);
 	}
 		
 }
